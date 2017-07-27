@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .7);
+    background-image: url(http://peerhustle.com/wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-7.13.43-PM.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: luminosity;
+}
+
+.wrapper {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 25vh 30px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+
+}
+
+header {
+    text-transform: uppercase;
+    letter-spacing: 1em;
+    font-size: 2em;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    border: none;
+    background: none;
+    border-bottom: 3px solid #088dff;
+    padding: 15px 5px;
+    color: white;
+    font-size: 2em;
+    outline: none;
+}
+
+.input-group label {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 5px;
+    font-size: 2em;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+
+.input-group input:invalid + label,
+.input-group input:focus + label {
+    top: calc(15px - 2em);
+    font-size: 1em;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+form input[type='submit'] {
+    background: #088dff;
+    border: none;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        text-transform: uppercase;
+        letter-spacing: 1em;
+        font-size: 1em;
+    }
+
+    .input-group label {
+        font-size: 1em;
+    }
+
+    .input-group input {
+        font-size: 1em;
+    }
+
+    .input-group input:invalid + label,
+    .input-group input:focus + label {
+        font-size: .75em;
+    }
+
+    form input[type='submit'] {
+        margin-left: 15px;
+        height: 30px;
+        width: 30px;
+        font-size: 1em;
+    }
+}
